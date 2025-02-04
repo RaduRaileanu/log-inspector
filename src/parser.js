@@ -1,4 +1,5 @@
 import { parseStream } from "fast-csv";
+import checkLogEntry from "./log-entry-processor.js";
 
 const parseCSV = async (stream) => {
 
@@ -19,13 +20,13 @@ const parseCSV = async (stream) => {
                 // save the time of the last entry in the log file
                 lastLogEntryTime = row[0];
                 // process log entry logic
-
+                currentJobs.push(checkLogEntry(row, entries, firstLogEntryTime))
             }) 
         .on('end', async () => {
                 // wait to finish processing all rows then finish the report
                 await Promise.all(currentJobs);
                 // finish report logic
-                
+
             });
 
     
