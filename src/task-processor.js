@@ -1,4 +1,5 @@
 import moment from "moment";
+import { reportTask } from "./reporter.js";
 
 // set the time format used by moment
 const TIME_FORMAT = 'HH:mm:ss';
@@ -28,7 +29,7 @@ const checkTaskDuration = async (pid, entries, startTime, endTime, checkRemainin
     if (taskDuration >= WARNING_THRESHOLD) {
 
         //call function to handle adding the task information in the report file
-
+        reportTask(pid, entries, endTime, taskDuration, status);
     }
 
     // if the task finished before the warning threshold delete the entry, as it is certait it must not be included in the warning/error report
