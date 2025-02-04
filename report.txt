@@ -22,3 +22,4 @@ WARNING: task 72897 - scheduled task 016 took at least 467 seconds to complete. 
 ERROR: task 3798013 - scheduled task 034 took at least 2314 seconds to complete. Task began before the log was generated and ended at 12:13:57
 Potential WARNING/ERROR: 244825 - scheduled task 673. Started at 12:20:14 but didn't finish by the time the log stopped.
 Potential WARNING/ERROR: 3798012 - scheduled task 033. Ended at 11:35:57 but started before the log began.
+WARNING: task 12345 - Job A took 600 seconds to complete. Task started at 12:00:00 and ended at 12:10:00
