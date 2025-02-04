@@ -1,6 +1,7 @@
 {
   "name": "log-inspecter",
   "version": "1.0.0",
+  "type": "module",
   "description": "A node.js app that finds the task that took more than 5 or 10 minutes to complete by inspecting a log file",
   "main": "index.js",
   "scripts": {

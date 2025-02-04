@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url';
+import parseCSV from './src/parser.js';
 
 //get the path to logs.log file
 const __filename = fileURLToPath(import.meta.url);
@@ -14,3 +15,4 @@ if (!fs.existsSync(filePath)) {
 
 // read the file as a stream and parse it using the custom made parser
 const stream = fs.createReadStream(filePath);
+parseCSV(stream);
