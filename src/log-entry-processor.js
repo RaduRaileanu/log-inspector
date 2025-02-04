@@ -1,3 +1,5 @@
+import checkTaskDuration from "./task-processor.js";
+
 /**
  * Checks a log entry
  * @param {Array} entry         An array consisting of each value in a csv file line
@@ -26,6 +28,7 @@ const checkLogEntry = async (entry, entries, firstLogEntryTime) => {
     // or if it should be deleted because it ended in a reasonable time
     else {
         // check task duration logic
+        checkTaskDuration(pid, entries, entries[pid].startAt, time);
     }
     
 }
