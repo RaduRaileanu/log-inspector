@@ -1,0 +1,24 @@
+{
+  "name": "log-inspecter",
+  "version": "1.0.0",
+  "description": "A node.js app that finds the task that took more than 5 or 10 minutes to complete by inspecting a log file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaduRaileanu/log-inspector.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RaduRaileanu/log-inspector/issues"
+  },
+  "homepage": "https://github.com/RaduRaileanu/log-inspector#readme",
+  "dependencies": {
+    "fast-csv": "^5.0.2",
+    "moment": "^2.30.1"
+  }
+}
