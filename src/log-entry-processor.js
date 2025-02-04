@@ -27,7 +27,6 @@ const checkLogEntry = async (entry, entries, firstLogEntryTime) => {
     // check its duration and decide if it should be kept (because it exceeds the warning or error thresholds)
     // or if it should be deleted because it ended in a reasonable time
     else {
-        // check task duration logic
         checkTaskDuration(pid, entries, entries[pid].startAt, time);
     }
     

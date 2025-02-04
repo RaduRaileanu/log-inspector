@@ -14,6 +14,11 @@ ERROR: task 62401 - scheduled task 936 took 624 seconds to complete. Task starte
 ERROR: task 23703 - scheduled task 374 took 806 seconds to complete. Task started at 12:04:57 and ended at 12:18:23
 WARNING: task 71766 - scheduled task 074 took 347 seconds to complete. Task started at 11:45:04 and ended at 11:50:51
 ERROR: task 81258 - background job wmy took 886 seconds to complete. Task started at 11:36:58 and ended at 11:51:44
-ERROR: task 70808 - scheduled task 182 took 2023 seconds to complete. Task started at 11:44:43 and ended at 12:18:26
 ERROR: task 45135 - scheduled task 515 took 743 seconds to complete. Task started at 11:37:14 and ended at 11:49:37
+ERROR: task 70808 - scheduled task 182 took 2023 seconds to complete. Task started at 11:44:43 and ended at 12:18:26
 WARNING: task 24482 - scheduled task 672 took 516 seconds to complete. Task started at 12:10:38 and ended at 12:19:14
+ERROR: task 72029 - scheduled task 333 took at least 1014 seconds to complete. Task started at 12:03:20 but did not finish by the time the log was generated
+WARNING: task 72897 - scheduled task 016 took at least 467 seconds to complete. Task started at 12:12:27 but did not finish by the time the log was generated
+ERROR: task 3798013 - scheduled task 034 took at least 2314 seconds to complete. Task began before the log was generated and ended at 12:13:57
+Potential WARNING/ERROR: 244825 - scheduled task 673. Started at 12:20:14 but didn't finish by the time the log stopped.
+Potential WARNING/ERROR: 3798012 - scheduled task 033. Ended at 11:35:57 but started before the log began.

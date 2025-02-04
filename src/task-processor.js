@@ -28,12 +28,17 @@ const checkTaskDuration = async (pid, entries, startTime, endTime, checkRemainin
     // if the task duration exceeded the warning threshold
     if (taskDuration >= WARNING_THRESHOLD) {
 
-        //call function to handle adding the task information in the report file
-        reportTask(pid, entries, endTime, taskDuration, status);
+        reportTask(pid, entries, startTime, endTime, taskDuration, status, checkRemainingEntry);
+
+        // since the entry was processed, remove it from the object that holds tasks for which only the start time is mentioned
+        delete entries[pid];
     }
 
-    // if the task finished before the warning threshold delete the entry, as it is certait it must not be included in the warning/error report
-    delete entries[pid];
+    // if the task finished before the warning threshold and its record is processed while the log file is being parsed (i.e there are both a start and end entries for it in log file)
+    // delete the entry, as it is certait it must not be included in the warning/error report
+    if(!checkRemainingEntry){
+        delete entries[pid];
+    }
 }
 
 export default checkTaskDuration;
